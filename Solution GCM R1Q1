@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int testcases, no, a, b, i;
+    cin >> testcases;
+    for (int j = 1; j <= testcases; j++)
+    {
+        cin >> no;
+        a = no;
+        int r = no, i = 1;
+        while (r > 0)
+        {
+            if (r % 10 == 4)
+            {
+                a = a - i;
+                b = no - a;
+            }
+            i *= 10;
+            r /= 10;
+        }
+
+        cout << "Case #" << j << ": " << a << " " << b << endl;
+    }
+    return 0;
+}
